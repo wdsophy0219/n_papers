@@ -1,0 +1,179 @@
+// out: style.css, sourcemap: false, compress: true
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@color-white:#FFF;
+@color-black:#000;
+@color-font:#666;
+@color-sub:#360F32;
+@color-main:#360F32;
+@color-master:#360F32;
+@color-line:@color-sub;
+
+@layoutwidth:700px;
+
+//reset
+body{font-family: 'Kanit','Noto Sans KR',sans-serif;}
+body,html,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,p{margin:0; padding:0;}
+ul,ol,li{list-style:none;}
+img{border:0; vertical-align: top;}
+input{vertical-align: middle;}
+a{
+  text-decoration: none;
+  color:@color-font;
+}
+
+//layout
+#header{
+    padding:20px 50px;
+  outline:1px #F00 solid;
+  text-align: center;
+  background-color:@color-master;
+  h1{
+    font-size:30px;
+    font-weight: 300;
+    border-bottom:2px @color-white solid;
+    padding-bottom:5px;
+    display:inline-block;
+    text-transform:uppercase;
+    a{
+      color:@color-white;
+      span{
+        font-size:12px;
+        display:block;
+      }
+    }
+  }
+  .blogMenu{
+      font-size:0;
+      li{
+          font-size:14px;
+          margin:0 5px;
+          display: inline-block;
+          a{
+             color:@color-white;
+
+          }
+      }
+  }
+
+}
+#container{
+
+  #content{
+    width:@layoutwidth;
+    float:left;
+  }
+  width: 990px;
+
+  margin:20px auto 0;
+  border:1px #F00 solid;
+  .entry{
+    .titleWrap{
+      margin-bottom:30px;
+      h2 a{
+        font-weight: 300;
+        border-bottom:2px @color-main solid;
+      }
+    }
+    .tagTrail{
+      border:1px @color-sub solid;
+      border-radius:3px;
+      margin:35px 0 0;
+      padding:10px 20px;
+      position:relative;
+      .tagText{
+        border-radius:3px 3px 0 0 ;
+        margin-left:20px;
+        position:absolute;
+        left:0;
+        top:-30px;
+        height:30px;
+        padding:0 15px;
+        background-color: @color-sub;
+        color:@color-white;
+      }
+      a{
+       font-size:12px;
+       color:@color-white;
+       background-color:@color-main;
+       padding:0 10px;
+       border-radius:3px;
+      }
+    }
+    .comment{
+      margin-top:30px;
+      .commentList{
+        border:1px #F00 solid;
+        li{
+          margin:10px 0;
+        }
+        >ol>li{
+          margin:30px 0;
+          li{
+            margin-left:68px;
+          }
+        }
+        .image{
+          display:block;
+          width:50px;
+          height:50px;
+          border-radius:3px;
+          border:3px @color-master solid;
+          overflow:hidden;
+          float:left;
+          margin-right:10px;
+          img{
+            width:100%;
+          }
+        }
+        .control{
+            float:right;
+            +p{
+              border:1px #F00 solid;
+              overflow:hidden;
+
+            }
+
+        }
+
+      }
+      .textwrap{
+        border:1px #F00 solid;
+        margin:0 20px;
+        border-radius:3px;
+        text-align:center;
+        textarea{
+          border:0 none;
+          width:98%;
+          resize:none;
+          vertical-align:top;
+        }
+      }
+    }
+    .paging{
+      text-align:center;
+      padding:20px 0;
+      a{
+        border:1px #F00 solid;
+        padding:0 5px;
+        border-radius: 3px;
+        font-size:12px;
+      }
+    }
+  }
+  #sidebar{
+    margin-left:@layoutwidth;
+    padding:0 10px;
+    border:1px #F00 solid;
+    .blogImage{
+      margin-top:-20px;
+    }
+  }
+}
+
+
+
+
+
+//
